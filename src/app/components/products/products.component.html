@@ -1,0 +1,56 @@
+
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let p of products">
+      
+      <div class="card col-md-3">
+        <img src="{{ p.image }}" alt="" />
+        <h5
+          style="
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100ch;
+          "
+        >
+          {{ p.title }}
+        </h5>
+        <p
+          style="
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100ch;
+          "
+        >
+          {{ p.description }}
+        </p>
+        <p><strong>Price:</strong> {{ p.price }}TND</p>
+   <button class="btn btn-light" (click)="viewMoreDetails(p)"> 
+            <i
+              class="fa-solid fa-eye"
+              style="width: 40px"
+            ></i
+            >View more details
+          </button> 
+   
+          <button class="btn btn-light" (click)="openCartDialog(p)">
+            <i class="fa-solid fa-cart-plus" style="width: 40px"></i>Add to cart
+          </button>
+          <button class="btn btn-light" routerLink="/product/{{p.id}}">
+            <i
+              
+              class="fa-solid fa-pen-to-square"
+              style="width: 40px"
+              ></i
+            >Edit
+          </button>
+        
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+
+
+

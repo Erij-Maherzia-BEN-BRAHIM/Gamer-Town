@@ -1,0 +1,38 @@
+<div class="modal-content" *ngIf="selectedProduct">
+  <div class="row">
+    <div class="col-11">
+      <h1 mat-dialog-title class="modal-title" style="padding-left: 20px;">
+        {{selectedProduct.title}}
+      </h1>
+    </div>
+    <div class="col-1">
+      <button
+        mat-button
+        mat-dialog-close
+        type="button"
+        class="btn-close"
+        aria-label="Close"
+      ></button>
+ 
+    </div>
+  </div>
+
+  <div mat-dialog-content class="modal-body" *ngIf="selectedProduct">
+    <div class="container" style="padding: 20px;">
+      <div class="row">
+        <div class="col-3">
+          <img src="{{ selectedProduct.image }}">
+        </div>
+        <div class="col-9">
+            {{ selectedProduct.description }}
+            <hr>
+       <strong>Price:</strong>     {{ selectedProduct.price }} TND
+       
+        </div>
+        
+      </div>
+      
+    
+    </div>
+  </div>
+</div>

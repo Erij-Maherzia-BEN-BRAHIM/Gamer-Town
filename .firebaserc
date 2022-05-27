@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "gamer-town-9b863": {
+      "hosting": {
+        "gamer-town": [
+          "gamer-town-9b863"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "gamer-town-9b863"
+  }
+}

@@ -1,0 +1,39 @@
+<div class="modal-content" *ngIf="selectedProduct">
+  
+        <button style="float: right;"
+          mat-button
+          mat-dialog-close
+          type="button"
+          class="btn-close"
+          aria-label="Close"
+        ></button>
+      
+    
+  
+  <hr />
+  <div mat-dialog-content class="modal-body" *ngIf="selectedProduct">
+    <div class="container" style="padding: 20px">
+      <div class="row">
+        <div class="col-3">
+          <img src="{{ selectedProduct.image }}" />
+        </div>
+        <div class="col-9">
+          <b> {{ selectedProduct.title }}</b> <br />
+          <strong style="color: red"
+            >Price: {{ selectedProduct.price }} TND
+          </strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div mat-dialog-content class="modal-footer">
+  <i class="fa-solid fa-bag-shopping"></i> You have {{ totalItem }} item(s) in
+  your cart. <br />
+  Total: {{ grandTotal }} TTC
+  <div class="buttons">
+    <button class="btn btn-dark" (click)="addToTheCart()">Order</button>
+  </div>
+</div>
+</div>

@@ -1,0 +1,16 @@
+.buttons{
+    align-items: center;
+   display: flex;
+   float: right;
+}
+img{
+    height: 20vh;
+}
+.modal-title{
+    display: block;
+    text-align: center;
+    padding-top: 5px;
+}
+input{
+    width: 10vh;
+}
