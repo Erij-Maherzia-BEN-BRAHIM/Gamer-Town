@@ -31,6 +31,9 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
 import { CartComponent } from './components/cart/cart.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { AddToCartDialogComponent } from './components/add-to-cart-dialog/add-to-cart-dialog.component';
+import { MatMenuModule} from '@angular/material/menu';
+import { FilterPipe } from './shared/filter.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 
  @NgModule({
@@ -45,7 +48,8 @@ import { AddToCartDialogComponent } from './components/add-to-cart-dialog/add-to
     VerifyEmailComponent,
     CartComponent,
     AddToCartDialogComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    FilterPipe
 
   ],
   imports: [
@@ -68,7 +72,9 @@ import { AddToCartDialogComponent } from './components/add-to-cart-dialog/add-to
     NgbModule,
     NoopAnimationsModule, 
     MatDialogModule,
-    MatSliderModule
+    MatSliderModule,
+    MatMenuModule,
+    HttpClientModule
   ],
   providers: [
     ScreenTrackingService,UserTrackingService, {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}
